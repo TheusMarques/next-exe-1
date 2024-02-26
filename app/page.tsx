@@ -2,6 +2,13 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const newLocal = <Image
+    className={styles.logo}
+    src="/next.svg"
+    alt="Next.js Logo"
+    width={180}
+    height={37}
+    priority />;
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -16,27 +23,22 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{" "}
-            <Image
+            {/* <Image
               src="/vercel.svg"
               alt="Vercel Logo"
               className={styles.vercelLogo}
               width={100}
               height={24}
               priority
-            />
+            /> */}
           </a>
+          
         </div>
+        
       </div>
 
       <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        {newLocal}
       </div>
 
       <div className={styles.grid}>
