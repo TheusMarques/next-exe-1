@@ -1,10 +1,20 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
 
-export default function page() {
-  return(
-    <h1>opa next</h1>
-    <h2>opa next</h2>
-    <h3>opa next</h3>
-  )
-  };
+export default function Page() {
+  return( 
+    <>
+  <h1>Hello, Next.js!</h1>
+  <h2>Título 2</h2>
+  <h3>Título 3</h3>
+  
+  <ul>
+    <li><Link href={'/sobre'}>Sobre</Link></li>
+    <li><Link href={'/usuarios/Cadusuario'}>Cadastro de Usuário</Link></li>
+    <li><Link href={'/usuarios'}>Listar Usuarios</Link></li>
+  </ul>
+  
+
+  </>
+
+  );
+}
